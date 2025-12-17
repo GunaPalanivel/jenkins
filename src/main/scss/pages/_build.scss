@@ -313,4 +313,14 @@
   .jenkins-app-bar {
     margin-block: 0.875rem;
   }
+
+  // Limit the Builds card height to prevent excessive vertical space usage
+  // See JENKINS-76233: "Builds" section occupies too much space on new job page
+  #jenkins-builds {
+    max-height: 450px;
+
+    .jenkins-card__content {
+      overflow-y: auto;
+    }
+  }
 }
